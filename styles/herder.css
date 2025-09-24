@@ -1,0 +1,58 @@
+header.conteinerHeader {
+    height: calc(100vh);
+    width: 100%;
+    background-image: url(../public/backgroundHeader.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+div.gradienteFundoHeader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, #0e800e9c, #419c4150 40%, #6ab26a5d, transparent 60%);
+
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+}
+
+div.conteinerConteudoHeader {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+p.textoIntroducao {
+    color: #fff9ed;
+    font-size: 2.8rem;
+    text-align: justify;
+}
+
+button.botaoDescubraMais {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2FC42F;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+a.linkBotaoHeader {
+    text-decoration: none;
+    color: #fff9ed;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

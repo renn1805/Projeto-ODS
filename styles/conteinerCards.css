@@ -1,0 +1,168 @@
+section.sectionCards {
+    height: calc(100vh - 25px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-inline: 100px;
+    justify-content: center;
+}
+
+div.conteinerCards {
+    height: 400px;
+    width: 300px;
+    border: 1px solid tomato;
+    position: absolute;
+}
+
+div.card {
+    width: 100%;
+    height: 100%;
+    transition: all 1.2s ease-in-out;
+}
+
+div.card1 {
+    background: red;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid;
+}
+
+div.card2 {
+    background: gray;
+    position: absolute;
+    border: 1px solid;
+    z-index: 99;
+    transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
+}
+
+div.card3 {
+    background: gray;
+    position: absolute;
+    border: 1px solid;
+    z-index: 98;
+    transform: rotate(calc(-10deg)) scale(0.8) translateX(-85px) translateY(20px);
+}
+
+div.card4 {
+    background: gray;
+    position: relative;
+    border: 1px solid;
+    z-index: 97;
+    transform: rotate(calc(-15deg)) scale(0.7) translateX(-130px) translateY(30px);
+}
+
+/* ? animações */
+
+.card1.animacaoCard1para2 {
+    z-index: 99;
+    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
+    background: gray;
+
+}
+
+.card2.animacaoCard1para2 {
+    z-index: 100;
+    transform: rotate(0) scale(1) translateX(0) translateY(0);
+    background: red;
+}
+
+.card3.animacaoCard1para2 {
+    transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
+    z-index: 98;
+    background: gray;
+
+}
+
+.card4.animacaoCard1para2 {
+    transform: rotate(calc(-10deg)) scale(0.8) translateX(-85px) translateY(20px);
+    z-index: 97;
+    background: gray;
+
+}
+
+/* ? */
+
+.card1.animacaoCard2para3 {
+    z-index: 97;
+    transform: rotate(10deg) scale(.8) translateX(85px) translateY(20px);
+    background: gray;
+
+}
+
+.card2.animacaoCard2para3 {
+    z-index: 98;
+    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
+    background: gray;
+
+}
+
+.card3.animacaoCard2para3 {
+    transform: rotate(0) scale(1) translateX(0) translateY(0);
+    z-index: 100;
+    background: red;
+}
+
+.card4.animacaoCard2para3 {
+    transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
+    z-index: 97;
+    background: gray;
+
+}
+
+/* ? */
+
+.card1.animacaoCard3para4 {
+    z-index: 97;
+    transform: rotate(15deg) scale(.7) translateX(130px) translateY(30px);
+    background: gray;
+
+}
+
+.card2.animacaoCard3para4 {
+    z-index: 98;
+    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
+    background: gray;
+
+}
+
+.card3.animacaoCard3para4 {
+    transform: rotate(0) scale(1) translateX(0) translateY(0);
+    z-index: 100;
+    background: red;
+}
+
+.card4.animacaoCard3para4 {
+    transform: rotate(0) scale(1) translateX(0) translateY(0);
+    z-index: 97;
+    background: gray;
+
+}
+
+/* ? */
+
+.card1.animacaoCard3para4 {
+    z-index: 97;
+    transform: rotate(15deg) scale(.7) translateX(130px) translateY(30px);
+    background: gray;
+
+}
+
+.card2.animacaoCard3para4 {
+    z-index: 98;
+    transform: rotate(10deg) scale(.8) translateX(85px) translateY(20px);
+    background: gray;
+
+}
+
+.card3.animacaoCard3para4 {
+    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
+    z-index: 99;
+    background: gray;
+}
+
+.card4.animacaoCard3para4 {
+    transform: rotate(0) scale(1) translateX(0) translateY(0);
+    z-index: 100;
+    background: red;
+
+}
