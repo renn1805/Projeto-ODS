@@ -31,7 +31,6 @@ div.conteinerConteudoHeader {
 p.textoIntroducao {
     color: #fff9ed;
     font-size: 2.8rem;
-    text-align: justify;
 }
 
 button.botaoDescubraMais {
@@ -44,6 +43,12 @@ button.botaoDescubraMais {
     border: none;
     border-radius: 8px;
     color: white;
+    transition: all .7s ease-in-out;
+}
+
+button.botaoDescubraMais:hover {
+    background: #259825;
+
 }
 
 a.linkBotaoHeader {
