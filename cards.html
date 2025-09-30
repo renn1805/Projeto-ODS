@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards
+
+    </title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .conteiner {
+            width: fit-content;
+            height: fit-content;
+            /* position: absolute; */
+            /* border: 1px solid tomato; */
+        }
+
+        .cards {
+            width: 150px;
+            height: 150px;
+            transition: all 1s ease-in-out;
+            border-radius: 12px;
+        }
+
+        .cards:nth-child(1) {
+            background: red;
+            border: 1px solid;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .cards:nth-child(2) {
+            background: rgb(212, 212, 212);
+            border: 1px solid;
+            position: absolute;
+            z-index: 2;
+            transform: rotate(-8deg) scale(.9) translateX(-30px) translateY(10px);
+        }
+
+        .cards:nth-child(3) {
+            background: rgb(212, 212, 212);
+            background: rgb(212, 212, 212);
+            border: 1px solid;
+            position: relative;
+            z-index: 1;
+            transform: rotate(-16deg) scale(.8) translateX(-60px) translateY(20px);
+
+        }
+
+        .card1.animacaoTopo2 {
+            z-index: 2;
+            transform: rotate(8deg) scale(.9) translateX(30px) translateY(10px);
+            background: #ccc;
+        }
+
+        .card2.animacaoTopo2 {
+            z-index: 3;
+            transform: rotate(0) scale(1) translateX(0) translateY(0);
+            background: red;
+        }
+
+        .card3.animacaoTopo2 {
+            transform: rotate(-8deg) scale(.9) translateX(-30px) translateY(10px);
+            z-index: 1;
+        }
+
+        .card1.animacaoTopo3 {
+            z-index: 1;
+            transform: rotate(16deg) scale(.8) translateX(60px) translateY(20px);
+            background: #ccc;
+        }
+
+        .card2.animacaoTopo3 {
+            z-index: 2;
+            transform: rotate(8deg) scale(.9) translateX(30px) translateY(10px);
+            background: #ccc;
+        }
+
+        .card3.animacaoTopo3 {
+            transform: rotate(0) scale(1) translateX(0) translateY(0);
+            z-index: 3;
+            background: red;
+        }
+
+        button.avancar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        div.conteudo {
+            border: 1px solid;
+            padding: 60px;
+            display: flex;
+            gap: 70px;
+            justify-content: center;
+        }
+
+        div.textoCards {
+            max-width: 500px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+        }
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        img:nth-child(1) {
+            transform: rotate(180deg);
+        }
+
+        p {
+            display: none;
+        }
+
+        p.textCard1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="conteiner">
+            <div class="cards cardTopo card1"></div>
+            <div class="cards card2"></div>
+            <div class="cards card3"></div>
+        </div>
+        <div class="textoCards">
+            <img src="./coisasDoRenan/iconeVoltarAvancar.png" class="iconeVoltar">
+            <p class="textCard1">
+                card 1
+            </p>
+            <p class="textCard2">
+                card 2
+            </p>
+            <p class="textCard3">
+                card 3
+            </p>
+            <img src="./coisasDoRenan/iconeVoltarAvancar.png" class="iconeAvancar">
+
+        </div>
+    </div>
+</body>
+<script>
+    const avancar = document.querySelector('.iconeAvancar')
+    const voltar = document.querySelector('.iconeVoltar')
+    const conteiner = document.querySelector('.conteiner')
+
+    let cardTopo = document.querySelector('.cardTopo')
+    let cards = document.querySelectorAll('.cards')
+    let textCards = document.querySelectorAll('p')
+
+    avancar.addEventListener('click', () => {
+        switch (cardTopo) {
+            case cards[0]:
+                animacaoTopo2()
+                break
+
+            case cards[1]:
+                animacaoTopo3()
+                break
+
+            case cards[2]:
+                animacaoTopo1()
+                break
+        }
+        cardTopo = document.querySelector('.cardTopo')
+    })
+
+    voltar.addEventListener('click', () => {
+        switch (cardTopo) {
+            case cards[0]:
+                animacaoTopo3()
+                break
+
+            case cards[1]:
+                animacaoTopo1()
+                break
+
+            case cards[2]:
+                animacaoTopo2()
+                break
+        }
+        cardTopo = document.querySelector('.cardTopo')
+    })
+
+    function animacaoTopo2() {
+        cards.forEach(card => {
+            card.classList.add('animacaoTopo2')
+            card.classList.remove('cardTopo', 'animacaoTopo3')
+        })
+        textCards.forEach(text => {
+            text.style.display = 'none'
+        })
+        textCards[1].style.display = 'block'
+        cards[1].classList.add('cardTopo')
+    }
+
+    function animacaoTopo3() {
+        cards.forEach(card => {
+            card.classList.add('animacaoTopo3')
+            card.classList.remove('cardTopo', 'animacaoTopo2')
+        })
+        textCards.forEach(text => {
+            text.style.display = 'none'
+        })
+        textCards[2].style.display = 'block'
+
+        cards[2].classList.add('cardTopo')
+    }
+    function animacaoTopo1() {
+        cards.forEach(card => {
+            card.classList.remove('animacaoTopo2', 'animacaoTopo3')
+            card.classList.remove('cardTopo')
+        })
+        textCards.forEach(text => {
+            text.style.display = 'none'
+        })
+        textCards[0].style.display = 'block'
+
+        cards[0].classList.add('cardTopo')
+
+    }
+
+</script>
+
+</html>
