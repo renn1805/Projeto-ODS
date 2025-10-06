@@ -5,6 +5,61 @@ section.sectionCards {
     align-items: center;
     padding-inline: 100px;
     justify-content: center;
+    background: radial-gradient(rgba(170, 247, 170, 0.313), rgba(157, 241, 157, 0.345));
+}
+
+div.conteinerSectionCards {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+div.barraLateralTexto:hover * {
+    background: rgb(4, 190, 4);
+}
+
+div.barraLateralTexto * {
+    border-radius: 6px;
+}
+
+div.barraEsquerdaTexto,
+div.barraDireitaTexto {
+    padding: 20px;
+    /* border: 1px solid; */
+}
+
+div.barraDireitaTexto {
+    transform: rotateX(180deg);
+}
+
+div.barraSuperior {
+    transform: translateY(2px);
+}
+
+div.conteinerSectionCards:hover div.barraEsquerdaTexto div.barraSuperior {
+    transform: rotate(8deg) translateY(1px);
+}
+
+div.conteinerSectionCards:hover div.barraEsquerdaTexto div.barraInferior {
+    transform: rotate(-8deg) translateY(-1px);
+
+}
+
+div.conteinerSectionCards:hover div.barraDireitaTexto div.barraSuperior {
+    transform: rotate(-8deg) translateY(1px);
+}
+
+div.conteinerSectionCards:hover div.barraDireitaTexto div.barraInferior {
+    transform: rotate(8deg) translateY(-1px);
+
+}
+
+div.barraEsquerdaTexto *,
+div.barraDireitaTexto * {
+    width: 3px;
+    height: 70px;
+    background: rgb(76, 75, 75);
+    transition: transform .8s ease-in-out, background .3s ease-in-out;
 }
 
 div.conteinerCards {
@@ -17,15 +72,10 @@ div.conteinerCards {
 div.card {
     width: 370px;
     height: 470px;
-    padding: 30px 20px;
+    padding: 20px;
 
     border: 2px solid #216425;
     border-radius: 16px;
-
-    font-family: 'Itim';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5rem;
 
     display: flex;
     text-align: center;
@@ -37,61 +87,95 @@ div.card {
 }
 
 div.card1 {
-    background: #a7e1a9;
+    background: url(../public/imgCard1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     z-index: 100;
 }
 
-div.imgCard {
-    display: flex;
-    justify-content: center;
-}
-
-img.imgCard {
-    width: 120px;
-}
-
 div.card2 {
-    background: #81C784;
+    background: url(../public/imgCard2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     position: absolute;
     z-index: 99;
     transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
 }
 
 div.card3 {
-    background: #4CAF50;
+    background: url(../public/imgCard3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     position: absolute;
     z-index: 98;
     transform: rotate(calc(-10deg)) scale(0.8) translateX(-85px) translateY(20px);
 }
 
 div.card4 {
-    background: #38823c;
+    background: url(../public/imgCard4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     position: relative;
     z-index: 97;
     transform: rotate(calc(-15deg)) scale(0.7) translateX(-130px) translateY(30px);
 }
 
+div.textSectionCards {
+    width: 600px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    /* text-align: justify; */
+}
+
+div.textSectionCards img {
+    width: 40px;
+    height: 40px;
+}
+
+div.textSectionCards p {
+    display: none;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    transition: opacity 1.2s ease-in-out;
+    color: rgb(76, 75, 75);
+}
+
+div.textSectionCards p.textSectionCards1 {
+    display: block;
+}
+
 /* ? animações */
 
-.card1.animacaoCard1para2 {
+.card1.animacaoTopo2 {
     z-index: 99;
     transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
 
 }
 
-.card2.animacaoCard1para2 {
+.card2.animacaoTopo2 {
     z-index: 100;
     transform: rotate(0) scale(1) translateX(0) translateY(0);
 }
 
-.card3.animacaoCard1para2 {
+.card3.animacaoTopo2 {
     transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
     z-index: 98;
 
 }
 
-.card4.animacaoCard1para2 {
+.card4.animacaoTopo2 {
     transform: rotate(calc(-10deg)) scale(0.8) translateX(-85px) translateY(20px);
     z-index: 97;
 
@@ -99,23 +183,23 @@ div.card4 {
 
 /* ? */
 
-.card1.animacaoCard2para3 {
+.card1.animacaoTopo3 {
     z-index: 97;
     transform: rotate(10deg) scale(.8) translateX(85px) translateY(20px);
 }
 
-.card2.animacaoCard2para3 {
+.card2.animacaoTopo3 {
     z-index: 98;
     transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
 
 }
 
-.card3.animacaoCard2para3 {
+.card3.animacaoTopo3 {
     transform: rotate(0) scale(1) translateX(0) translateY(0);
     z-index: 100;
 }
 
-.card4.animacaoCard2para3 {
+.card4.animacaoTopo3 {
     transform: rotate(-5deg) scale(.9) translateX(-40px) translateY(10px);
     z-index: 97;
 
@@ -123,50 +207,37 @@ div.card4 {
 
 /* ? */
 
-.card1.animacaoCard3para4 {
+.card1.animacaoTopo4 {
     z-index: 97;
     transform: rotate(15deg) scale(.7) translateX(130px) translateY(30px);
 
 }
 
-.card2.animacaoCard3para4 {
-    z-index: 98;
-    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
-
-}
-
-.card3.animacaoCard3para4 {
-    transform: rotate(0) scale(1) translateX(0) translateY(0);
-    z-index: 100;
-}
-
-.card4.animacaoCard3para4 {
-    transform: rotate(0) scale(1) translateX(0) translateY(0);
-    z-index: 97;
-
-}
-
-/* ? */
-
-.card1.animacaoCard3para4 {
-    z-index: 97;
-    transform: rotate(15deg) scale(.7) translateX(130px) translateY(30px);
-
-}
-
-.card2.animacaoCard3para4 {
+.card2.animacaoTopo4 {
     z-index: 98;
     transform: rotate(10deg) scale(.8) translateX(85px) translateY(20px);
 
 }
 
-.card3.animacaoCard3para4 {
-    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
+.card3.animacaoTopo4 {
     z-index: 99;
+    transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
 }
 
-.card4.animacaoCard3para4 {
+.card4.animacaoTopo4 {
     transform: rotate(0) scale(1) translateX(0) translateY(0);
     z-index: 100;
 
+}
+
+@keyframes animacaoTextoCard {
+    0% {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
 }

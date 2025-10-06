@@ -1,13 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
 
-    background:#fff9ed;
-;
+    background: #fff9ed;
+}
+
+:root {
+    --backgroundColorNav: #49be49cd;
+
+    --backgroundColorButton: #2FC42F;
+    --backgroundColorButtonHover: #259825;
+
+    
 }

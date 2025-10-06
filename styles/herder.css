@@ -39,15 +39,16 @@ button.botaoDescubraMais {
     align-items: center;
     justify-content: center;
 
-    background: #2FC42F;
+    background: var(--backgroundColorButton);
     border: none;
     border-radius: 8px;
     color: white;
     transition: all .7s ease-in-out;
+ 
 }
 
 button.botaoDescubraMais:hover {
-    background: #259825;
+    background: var(--backgroundColorButtonHover);
 
 }
 

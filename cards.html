@@ -127,10 +127,17 @@
 
         p {
             display: none;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
         }
 
         p.textCard1 {
             display: block;
+            /* opacity: 100%; */
+        }
+
+        p.textCard1:hover{
+            opacity: 100%;
         }
     </style>
 </head>
@@ -143,7 +150,7 @@
             <div class="cards card3"></div>
         </div>
         <div class="textoCards">
-            <img src="./coisasDoRenan/iconeVoltarAvancar.png" class="iconeVoltar">
+            <img src="public/iconeVoltarAvancar.png" class="iconeVoltar">
             <p class="textCard1">
                 card 1
             </p>
@@ -153,8 +160,7 @@
             <p class="textCard3">
                 card 3
             </p>
-            <img src="./coisasDoRenan/iconeVoltarAvancar.png" class="iconeAvancar">
-
+            <img src="public/iconeVoltarAvancar.png" class="iconeAvancar">
         </div>
     </div>
 </body>
@@ -210,6 +216,7 @@
             text.style.display = 'none'
         })
         textCards[1].style.display = 'block'
+        textCards[1].style.opacity = '100%'
         cards[1].classList.add('cardTopo')
     }
 

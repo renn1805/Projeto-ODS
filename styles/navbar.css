@@ -3,7 +3,7 @@ nav.navbar {
     align-items: center;
     width: 100%;
     height: 60px;
-    background: #49be49cd;
+    background: var(--backgroundColorNav);
     backdrop-filter: blur(3px);
     position: fixed;
     top: 0;
@@ -86,12 +86,15 @@ button.botaoEntrarConta {
 button.botaoCriarConta {
     height: 35px;
     padding-inline: 10px;
-    background: #2FC42F;
+    background: var(--backgroundColorButton);
     border: none;
     border-radius: 8px;
     outline: none;
     transition: all .7s ease-in-out;
+    border: 1px solid #216425;
+
 }
-button.botaoCriarConta:hover{
-    background: #259825;
+
+button.botaoCriarConta:hover {
+    background: var(--backgroundColorButtonHover);
 }

@@ -1,48 +1,110 @@
-const conteiner = document.querySelector('.conteinerCards')
-let cardTopo = document.querySelector('.cardTopo')
-let cards = document.querySelectorAll('.card')
+const botaoAvancar = document.querySelector('.barraDireitaTexto')
+const botaoVoltar = document.querySelector('.barraEsquerdaTexto')
+const cards = document.querySelectorAll('.card')
+const textoCards = document.querySelectorAll('.textoCards')
 
-conteiner.addEventListener('click', () => {
-    if (cardTopo == cards[0]) {
-        animacao1Para2Card()
-    } else if (cardTopo == cards[1]) {
-        animacao2Para3Card()
-    } else if (cardTopo == cards[2]) {
-        animacao3Para4Card()
-    } else {
-        animacao4Para1Card()
+let cardTopo = document.querySelector('.cardTopo')
+
+botaoAvancar.addEventListener('click', () => {
+    switch (cardTopo) {
+        case cards[0]:
+            animacaoTopo2()
+            break
+        case cards[1]:
+            animacaoTopo3()
+            break
+        case cards[2]:
+            animacaoTopo4()
+            break
+        case cards[3]:
+            animacaoTopo1()
+            break
     }
     cardTopo = document.querySelector('.cardTopo')
+    console.log(cards)
 })
 
-function animacao1Para2Card() {
+botaoVoltar.addEventListener('click', () => {
+    switch (cardTopo) {
+        case cards[0]:
+            animacaoTopo4()
+            break
+        case cards[1]:
+            animacaoTopo1()
+            break
+        case cards[2]:
+            animacaoTopo2()
+            break
+        case cards[3]:
+            animacaoTopo3()
+            break
+    }
+    cardTopo = document.querySelector('.cardTopo')
+
+})
+function animacaoTopo2() {
     cards.forEach(card => {
-        card.classList.add('animacaoCard1para2')
+        card.classList.remove('cardTopo', 'animacaoTopo3', 'animacaoTopo4')
+        card.classList.add('animacaoTopo2')
     })
-    cards[0].classList.remove('cardTopo')
     cards[1].classList.add('cardTopo')
+
+    textoCards.forEach(texto => {
+        texto.style.display = 'none'
+        texto.style.animation = ''
+
+    })
+    textoCards[1].style.display = 'block'
+    textoCards[1].style.animation = 'animacaoTextoCard 1.2s ease-in-out'
 }
 
-function animacao2Para3Card() {
+
+function animacaoTopo3() {
     cards.forEach(card => {
-        card.classList.add('animacaoCard2para3')
+        card.classList.remove('cardTopo', 'animacaoTopo2', 'animacaoTopo4')
+        card.classList.add('animacaoTopo3')
     })
-    cards[1].classList.remove('cardTopo')
     cards[2].classList.add('cardTopo')
-}
-function animacao3Para4Card() {
-    cards.forEach(card => {
-        card.classList.add('animacaoCard3para4')
+
+    textoCards.forEach(texto => {
+        texto.style.display = 'none'
+        texto.style.animation = ''
+
     })
-    cards[2].classList.remove('cardTopo')
+    textoCards[2].style.display = 'block'
+    textoCards[2].style.animation = 'animacaoTextoCard 1.2s ease-in-out'
+
+}
+function animacaoTopo4() {
+    cards.forEach(card => {
+        card.classList.remove('cardTopo', 'animacaoTopo2', 'animacaoTopo3')
+        card.classList.add('animacaoTopo4')
+    })
     cards[3].classList.add('cardTopo')
 
-}
-function animacao4Para1Card() {
-    cards.forEach(card => {
-        card.classList.remove('animacaoCard2para3', 'animacaoCard1para2', 'animacaoCard3para4')
+    textoCards.forEach(texto => {
+        texto.style.display = 'none'
+        texto.style.animation = ''
+
     })
-    cards[3].classList.remove('cardTopo')
+    textoCards[3].style.display = 'block'
+    textoCards[3].style.animation = 'animacaoTextoCard 1.2s ease-in-out'
+
+
+}
+function animacaoTopo1() {
+    cards.forEach(card => {
+        card.classList.remove('cardTopo', 'animacaoTopo2', 'animacaoTopo3', 'animacaoTopo4')
+    })
     cards[0].classList.add('cardTopo')
+
+    textoCards.forEach(texto => {
+        texto.style.display = 'none'
+        texto.style.animation = ''
+
+    })
+    textoCards[0].style.display = 'block'
+    textoCards[0].style.animation = 'animacaoTextoCard 1.2s ease-in-out'
+
 
 }
