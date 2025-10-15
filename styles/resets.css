@@ -1,3 +1,4 @@
+/* ? documento de consfigurações globais de css */
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +13,10 @@ body {
     background: #fff9ed;
 }
 
+/* ? define variaveis que podem ser usadas em todas as paginas de css ligadas */
 :root {
     --backgroundColorNav: #49be49cd;
 
     --backgroundColorButton: #2FC42F;
     --backgroundColorButtonHover: #259825;
-
-    
 }

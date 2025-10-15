@@ -1,11 +1,14 @@
+/*? documento responsavel pelo estilo dos cards */
 section.sectionCards {
+    background: radial-gradient(rgba(170, 247, 170, 0.313), rgba(157, 241, 157, 0.345));
+
     height: calc(100vh - 25px);
     width: 100vw;
+    padding-inline: 100px;
+
     display: flex;
     align-items: center;
-    padding-inline: 100px;
     justify-content: center;
-    background: radial-gradient(rgba(170, 247, 170, 0.313), rgba(157, 241, 157, 0.345));
 }
 
 div.conteinerSectionCards {
@@ -14,6 +17,7 @@ div.conteinerSectionCards {
     gap: 80px;
 }
 
+/* ? muda a cor da barra */
 div.barraLateralTexto:hover * {
     background: rgb(4, 190, 4);
 }
@@ -28,6 +32,7 @@ div.barraDireitaTexto {
     /* border: 1px solid; */
 }
 
+/* ? inverte a barra da direita para ter as mesmas animações da esquerda só que espelhada */
 div.barraDireitaTexto {
     transform: rotateX(180deg);
 }
@@ -36,6 +41,7 @@ div.barraSuperior {
     transform: translateY(2px);
 }
 
+/* ? define as animações da barra lateral do texto */
 div.conteinerSectionCards:hover div.barraEsquerdaTexto div.barraSuperior {
     transform: rotate(8deg) translateY(1px);
 }
@@ -54,11 +60,14 @@ div.conteinerSectionCards:hover div.barraDireitaTexto div.barraInferior {
 
 }
 
+/* ? define o tamanho das partes da barra */
 div.barraEsquerdaTexto *,
 div.barraDireitaTexto * {
+    background: rgb(76, 75, 75);
+
     width: 3px;
     height: 70px;
-    background: rgb(76, 75, 75);
+
     transition: transform .8s ease-in-out, background .3s ease-in-out;
 }
 
@@ -69,7 +78,14 @@ div.conteinerCards {
     cursor: pointer;
 }
 
+/* ? define os comportamentos dos cards */
 div.card {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 25px;
+
     width: 370px;
     height: 470px;
     padding: 20px;
@@ -77,15 +93,10 @@ div.card {
     border: 2px solid #216425;
     border-radius: 16px;
 
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 25px;
-
     transition: all 1.2s ease-in-out;
 }
 
+/* ? definar o compoirtamento individual de cada card */
 div.card1 {
     background: url(../public/imgCard1.png);
     background-size: cover;
@@ -128,6 +139,9 @@ div.card4 {
     transform: rotate(calc(-15deg)) scale(0.7) translateX(-130px) translateY(30px);
 }
 
+/* ? */
+
+/* ? define o tamanho da arae do texto e das barras */
 div.textSectionCards {
     width: 600px;
     display: flex;
@@ -137,27 +151,28 @@ div.textSectionCards {
     /* text-align: justify; */
 }
 
-div.textSectionCards img {
-    width: 40px;
-    height: 40px;
-}
 
 div.textSectionCards p {
     display: none;
+
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.7rem;
-    transition: opacity 1.2s ease-in-out;
     color: rgb(76, 75, 75);
+
+    transition: opacity 1.2s ease-in-out;
 }
 
 div.textSectionCards p.textSectionCards1 {
     display: block;
 }
 
-/* ? animações */
+/* ! */
+/* ? define como vão ser cada um dos pontos que os cards possam estar  */
+/* ! */
 
+/*? define como os cards vão se comportar com a primeira animação, onde o segundo card ira ao topo */
 .card1.animacaoTopo2 {
     z-index: 99;
     transform: rotate(5deg) scale(.9) translateX(40px) translateY(10px);
@@ -181,8 +196,8 @@ div.textSectionCards p.textSectionCards1 {
 
 }
 
-/* ? */
-
+/* ! */
+/*? define como os cards vão se comportar com a segunda animação, onde o terceiro card ira ao topo */
 .card1.animacaoTopo3 {
     z-index: 97;
     transform: rotate(10deg) scale(.8) translateX(85px) translateY(20px);
@@ -205,8 +220,8 @@ div.textSectionCards p.textSectionCards1 {
 
 }
 
-/* ? */
-
+/* ! */
+/*? define como os cards vão se comportar com a terceira animação, onde o quarto card ira ao topo */
 .card1.animacaoTopo4 {
     z-index: 97;
     transform: rotate(15deg) scale(.7) translateX(130px) translateY(30px);
@@ -230,6 +245,7 @@ div.textSectionCards p.textSectionCards1 {
 
 }
 
+/*? define a animação que o texto vai ter ao entrar na tela */
 @keyframes animacaoTextoCard {
     0% {
         transform: translateY(-25px);

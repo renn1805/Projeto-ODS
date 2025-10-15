@@ -7,6 +7,7 @@
     <title>ecoCity</title>
     <link rel="shortcut icon" href="public/logotipoCurto.png" type="image/x-icon">
 
+    <!--? links de css separados por escopos -->
     <link rel="stylesheet" href="styles/resets.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/fonts.css">
@@ -15,9 +16,11 @@
 </head>
 
 <body>
+    <!-- ? tag semantica para navbar -->
     <nav class="navbar">
         <ul class="conteinerItensNavbar">
 
+            <!-- ? div que contem a parte da esquerda da navabar -->
             <div class="conteinerEsquerdaNavbar">
                 <li class="itemNavbar itemNavbar1">
                     <a href="#" class="linkLogo"><img src="public/logoCompleta.png" class="logoCompleta"></a>
@@ -29,6 +32,8 @@
                     <h3>EMPRESAS PARCEIRAS</h3>
                 </li>
             </div>
+
+            <!-- ? div que contem a parte da direita da navabar -->
             <div class="conteinerDireitaNavbar">
                 <li class="itemNavbar itemNavbar4">
                     <button class="botaoEntrarConta">
@@ -44,7 +49,10 @@
 
         </ul>
     </nav>
+
+    <!-- ? tag semantica que define um cabeçalho-->
     <header class="conteinerHeader">
+        <!-- ? div que contem o gradiente do header -->
         <div class="gradienteFundoHeader">
             <div class="conteinerConteudoHeader">
                 <p class="textoIntroducao">
@@ -58,8 +66,11 @@
             </div>
         </div>
     </header>
+    <!--? tag semantica que define uma sessão da pagina -->
     <section class="sectionCards" id="sectionCards">
+        <!--? é onde estão doas as informações dessa section -->
         <div class="conteinerSectionCards">
+            <!--? o conteiner que é onte o card do topo fica totalmente encaixado -->
             <div class="conteinerCards">
 
                 <div class="card card1 cardTopo"></div>
@@ -68,6 +79,7 @@
                 <div class="card card4"></div>
 
             </div>
+            <!--? É a div que contem todos os textos dessa section -->
             <div class="textSectionCards">
                 <div class="barraEsquerdaTexto barraLateralTexto">
                     <div class="barraSuperior"></div>
@@ -102,6 +114,7 @@
         </div>
     </section>
 </body>
+
 <script src="src/cards.js"></script>
 
 </html>
