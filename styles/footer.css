@@ -1,0 +1,80 @@
+footer {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+
+    padding: 40px 0;
+
+    background: var(--backgroundColorNav);
+    width: 100%;
+
+    overflow: hidden;
+}
+footer img.imgArvoreFooter{
+    position: absolute;
+    width: 220px;
+}
+footer img.imgArvoreFooter:nth-child(1){
+    left: 80px;
+    bottom: -5px;
+}
+footer img.imgArvoreFooter:nth-child(2){
+    right: 80px;
+    bottom: -5px;
+}
+div.ladoEsquerdoFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+div.ladoEsquerdoFooter span {
+    display: block;
+}
+
+div.ladoEsquerdoFooter img.imgFooter {
+    height: 60px;
+}
+div.ladoEsquerdoFooter img.imgRedesFooter {
+    height: 80px;
+}
+
+div.linhaCentralFooter{
+    height: 200px;
+    width: 3px;
+    background: white;
+}
+
+div.ladoDireitoFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+div.ladoDireitoFooter ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+}
+div.ladoDireitoFooter ul li a{
+    color: white;
+    text-decoration: none;
+}
+div.ladoDireitoFooter ul li:hover a{
+    text-decoration: underline;
+}
